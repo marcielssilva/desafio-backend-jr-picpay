@@ -8,6 +8,8 @@ import java.math.BigDecimal;
 @Table(name = "users")
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @EqualsAndHashCode(of = "id")
 // Lombok irá gerar automaticamente o construtor sem argumentos (NoArgsConstructor)
 public class User {
@@ -29,8 +31,7 @@ public class User {
 
     private BigDecimal balance;
 
-    // Tipo de dado customizado, pode ser um enum ou outro tipo, dependendo do seu caso
-    private UserType userType;  // Caso use um tipo personalizado como UserType ou Enum
+    @Enumerated(EnumType.STRING)
+    private UserType userType;
 
-    // O Lombok já gera o construtor sem argumentos, então não precisa escrever um manualmente.
 }

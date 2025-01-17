@@ -12,9 +12,9 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @EqualsAndHashCode(of = "id")
-// Lombok irá gerar automaticamente o construtor sem argumentos (NoArgsConstructor)
-@NoArgsConstructor  // Lombok irá gerar o construtor sem argumentos automaticamente
-@AllArgsConstructor // Lombok irá gerar o construtor com todos os parâmetros automaticamente
+
+@NoArgsConstructor
+@AllArgsConstructor
 public class Transaction {
 
     @Id
@@ -33,5 +33,4 @@ public class Transaction {
 
     private LocalDateTime timestamp;
 
-    // O Lombok já gera o construtor sem argumentos, então não é necessário um construtor manual
 }
